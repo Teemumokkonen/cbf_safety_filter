@@ -37,7 +37,6 @@ class ControlBarrierFunction:
                 #constrain = a * self.u[0]  >= -self.alpha * h.evaluate()
                 constraints.append(constrain)
         except Exception as e:
-            print("Error in CBF evaluation:", e)
             return [0.0, 0.0]
         
         problem = cv.Problem(objective, constraints)

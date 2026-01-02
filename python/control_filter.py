@@ -78,7 +78,6 @@ class ControlFilter(Node):
         self.state_initialized = True
 
     def costmap_callback(self, msg: OccupancyGrid):
-        self.get_logger().info("Received costmap update.")
         width = msg.info.width
         height = msg.info.height
 
